@@ -1,0 +1,13 @@
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\bin\Debug\netcoreapp3.1\TE19B-ar2.exe
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\bin\Debug\netcoreapp3.1\TE19B-ar2.deps.json
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\bin\Debug\netcoreapp3.1\TE19B-ar2.runtimeconfig.json
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\bin\Debug\netcoreapp3.1\TE19B-ar2.runtimeconfig.dev.json
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\bin\Debug\netcoreapp3.1\TE19B-ar2.dll
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\bin\Debug\netcoreapp3.1\TE19B-ar2.pdb
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\obj\Debug\netcoreapp3.1\TE19B-ar2.csprojAssemblyReference.cache
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\obj\Debug\netcoreapp3.1\TE19B-ar2.AssemblyInfoInputs.cache
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\obj\Debug\netcoreapp3.1\TE19B-ar2.AssemblyInfo.cs
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\obj\Debug\netcoreapp3.1\TE19B-ar2.csproj.CoreCompileInputs.cache
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\obj\Debug\netcoreapp3.1\TE19B-ar2.dll
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\obj\Debug\netcoreapp3.1\TE19B-ar2.pdb
+C:\githubschool\TE19B-ar2\Kapitel-1\Utmatning\obj\Debug\netcoreapp3.1\TE19B-ar2.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\bin\Debug\netcoreapp3.1\Konsolen.exe
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\bin\Debug\netcoreapp3.1\Konsolen.deps.json
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\bin\Debug\netcoreapp3.1\Konsolen.runtimeconfig.json
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\bin\Debug\netcoreapp3.1\Konsolen.runtimeconfig.dev.json
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\bin\Debug\netcoreapp3.1\Konsolen.dll
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\bin\Debug\netcoreapp3.1\Konsolen.pdb
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\obj\Debug\netcoreapp3.1\Konsolen.csprojAssemblyReference.cache
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\obj\Debug\netcoreapp3.1\Konsolen.AssemblyInfoInputs.cache
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\obj\Debug\netcoreapp3.1\Konsolen.AssemblyInfo.cs
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\obj\Debug\netcoreapp3.1\Konsolen.csproj.CoreCompileInputs.cache
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\obj\Debug\netcoreapp3.1\Konsolen.dll
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\obj\Debug\netcoreapp3.1\Konsolen.pdb
+C:\githubschool\TE19B-ar2\Kapitel-1\Konsolen\obj\Debug\netcoreapp3.1\Konsolen.genruntimeconfig.cache

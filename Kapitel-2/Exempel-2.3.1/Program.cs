@@ -19,7 +19,7 @@ namespace Exempel_2._3
             // Difference between the wrjump and the users jump
             jumpdiff = wrjump - jump;
 
-            // Result, this is done in cm not meters
+            // Result
             message = "Your jump of " + jump + " m is quite good, but compared to the world record jump of " + wrjump + " cm its not that much. The difference between them is " + jumpdiff + " m.";
 
             Console.WriteLine(message);

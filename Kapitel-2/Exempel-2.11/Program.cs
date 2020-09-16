@@ -6,7 +6,15 @@ namespace Exempel_2._11
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string a;
+            string msg;
+
+            Console.Write("Book");
+            a = Console.ReadLine();
+
+            msg = a;
+
+            Console.WriteLine(msg);
         }
     }
 }

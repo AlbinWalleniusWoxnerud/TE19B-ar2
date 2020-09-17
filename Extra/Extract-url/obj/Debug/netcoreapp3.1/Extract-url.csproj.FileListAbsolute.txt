@@ -1,0 +1,13 @@
+C:\githubschool\TE19B-ar2\Extra\Extract-url\bin\Debug\netcoreapp3.1\Extract-url.exe
+C:\githubschool\TE19B-ar2\Extra\Extract-url\bin\Debug\netcoreapp3.1\Extract-url.deps.json
+C:\githubschool\TE19B-ar2\Extra\Extract-url\bin\Debug\netcoreapp3.1\Extract-url.runtimeconfig.json
+C:\githubschool\TE19B-ar2\Extra\Extract-url\bin\Debug\netcoreapp3.1\Extract-url.runtimeconfig.dev.json
+C:\githubschool\TE19B-ar2\Extra\Extract-url\bin\Debug\netcoreapp3.1\Extract-url.dll
+C:\githubschool\TE19B-ar2\Extra\Extract-url\bin\Debug\netcoreapp3.1\Extract-url.pdb
+C:\githubschool\TE19B-ar2\Extra\Extract-url\obj\Debug\netcoreapp3.1\Extract-url.csprojAssemblyReference.cache
+C:\githubschool\TE19B-ar2\Extra\Extract-url\obj\Debug\netcoreapp3.1\Extract-url.AssemblyInfoInputs.cache
+C:\githubschool\TE19B-ar2\Extra\Extract-url\obj\Debug\netcoreapp3.1\Extract-url.AssemblyInfo.cs
+C:\githubschool\TE19B-ar2\Extra\Extract-url\obj\Debug\netcoreapp3.1\Extract-url.csproj.CoreCompileInputs.cache
+C:\githubschool\TE19B-ar2\Extra\Extract-url\obj\Debug\netcoreapp3.1\Extract-url.dll
+C:\githubschool\TE19B-ar2\Extra\Extract-url\obj\Debug\netcoreapp3.1\Extract-url.pdb
+C:\githubschool\TE19B-ar2\Extra\Extract-url\obj\Debug\netcoreapp3.1\Extract-url.genruntimeconfig.cache

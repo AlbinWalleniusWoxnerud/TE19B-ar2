@@ -1,0 +1,13 @@
+C:\githubschool\TE19B-ar2\Extra\FizzBang\bin\Debug\netcoreapp3.1\FizzBang.exe
+C:\githubschool\TE19B-ar2\Extra\FizzBang\bin\Debug\netcoreapp3.1\FizzBang.deps.json
+C:\githubschool\TE19B-ar2\Extra\FizzBang\bin\Debug\netcoreapp3.1\FizzBang.runtimeconfig.json
+C:\githubschool\TE19B-ar2\Extra\FizzBang\bin\Debug\netcoreapp3.1\FizzBang.runtimeconfig.dev.json
+C:\githubschool\TE19B-ar2\Extra\FizzBang\bin\Debug\netcoreapp3.1\FizzBang.dll
+C:\githubschool\TE19B-ar2\Extra\FizzBang\bin\Debug\netcoreapp3.1\FizzBang.pdb
+C:\githubschool\TE19B-ar2\Extra\FizzBang\obj\Debug\netcoreapp3.1\FizzBang.csprojAssemblyReference.cache
+C:\githubschool\TE19B-ar2\Extra\FizzBang\obj\Debug\netcoreapp3.1\FizzBang.AssemblyInfoInputs.cache
+C:\githubschool\TE19B-ar2\Extra\FizzBang\obj\Debug\netcoreapp3.1\FizzBang.AssemblyInfo.cs
+C:\githubschool\TE19B-ar2\Extra\FizzBang\obj\Debug\netcoreapp3.1\FizzBang.csproj.CoreCompileInputs.cache
+C:\githubschool\TE19B-ar2\Extra\FizzBang\obj\Debug\netcoreapp3.1\FizzBang.dll
+C:\githubschool\TE19B-ar2\Extra\FizzBang\obj\Debug\netcoreapp3.1\FizzBang.pdb
+C:\githubschool\TE19B-ar2\Extra\FizzBang\obj\Debug\netcoreapp3.1\FizzBang.genruntimeconfig.cache

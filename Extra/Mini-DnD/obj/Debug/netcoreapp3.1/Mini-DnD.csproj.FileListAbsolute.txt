@@ -1,0 +1,13 @@
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\bin\Debug\netcoreapp3.1\Mini-DnD.exe
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\bin\Debug\netcoreapp3.1\Mini-DnD.deps.json
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\bin\Debug\netcoreapp3.1\Mini-DnD.runtimeconfig.json
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\bin\Debug\netcoreapp3.1\Mini-DnD.runtimeconfig.dev.json
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\bin\Debug\netcoreapp3.1\Mini-DnD.dll
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\bin\Debug\netcoreapp3.1\Mini-DnD.pdb
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\obj\Debug\netcoreapp3.1\Mini-DnD.csprojAssemblyReference.cache
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\obj\Debug\netcoreapp3.1\Mini-DnD.AssemblyInfoInputs.cache
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\obj\Debug\netcoreapp3.1\Mini-DnD.AssemblyInfo.cs
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\obj\Debug\netcoreapp3.1\Mini-DnD.csproj.CoreCompileInputs.cache
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\obj\Debug\netcoreapp3.1\Mini-DnD.dll
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\obj\Debug\netcoreapp3.1\Mini-DnD.pdb
+C:\githubschool\TE19B-ar2\Extra\Mini-DnD\obj\Debug\netcoreapp3.1\Mini-DnD.genruntimeconfig.cache

@@ -1,0 +1,13 @@
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\obj\Debug\netcoreapp3.1\Exempel-2.17.csprojAssemblyReference.cache
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\obj\Debug\netcoreapp3.1\Exempel-2.17.AssemblyInfoInputs.cache
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\obj\Debug\netcoreapp3.1\Exempel-2.17.AssemblyInfo.cs
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\obj\Debug\netcoreapp3.1\Exempel-2.17.csproj.CoreCompileInputs.cache
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\bin\Debug\netcoreapp3.1\Exempel-2.17.exe
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\bin\Debug\netcoreapp3.1\Exempel-2.17.deps.json
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\bin\Debug\netcoreapp3.1\Exempel-2.17.runtimeconfig.json
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\bin\Debug\netcoreapp3.1\Exempel-2.17.runtimeconfig.dev.json
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\bin\Debug\netcoreapp3.1\Exempel-2.17.dll
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\bin\Debug\netcoreapp3.1\Exempel-2.17.pdb
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\obj\Debug\netcoreapp3.1\Exempel-2.17.dll
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\obj\Debug\netcoreapp3.1\Exempel-2.17.pdb
+C:\githubschool\TE19B-ar2\Kapitel-2\Exempel-2.17\obj\Debug\netcoreapp3.1\Exempel-2.17.genruntimeconfig.cache

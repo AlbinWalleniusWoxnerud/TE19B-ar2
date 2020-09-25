@@ -46,15 +46,10 @@ namespace Mini_DnD
             if (death == 0)
             {
                 Write($"As the {c1} enters your hands the pedestals sink into the ground.");
-
                 Write("With a loud rumble the four walls surrounding you collapse reveling four passages.\n");
-
                 Write("North ");
-
                 Write("East");
-
                 Write("South");
-
                 Write("West");
 
                 Console.Write("\nChoose a passage: ");

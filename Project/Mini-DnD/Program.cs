@@ -9,25 +9,188 @@ namespace Mini_DnD
         {
             for (int i = 0; i <= strin.Length - 1; i++)
             {
-                Thread.Sleep(20);
+                Console.ForegroundColor = ConsoleColor.White;
+                Thread.Sleep(2);
                 Console.Write(strin.Substring(i, 1));
             }
             if (strin.Length <= 10) Thread.Sleep(500);
+            Console.WriteLine();
+        }
+        static void WriteAscii(string stri)
+        {
+            for (int i = 0; i <= stri.Length - 1; i++)
+            {
+                Thread.Sleep(1);
+                Console.Write(stri.Substring(i, 1));
+            }
             Console.WriteLine();
         }
         static void Main(string[] args)
         {
             string c1;
             string c2;
+            string asciibow = @"
+                                                       |
+                                                        \.
+                                                        /|.
+                                                      /  `|.
+                                                    /     |.
+                                                  /       |.
+                                                /         `|.
+                                              /            |.
+                                            /              |.
+                                          /                |.
+     __                                 /                  `|.
+      -\                              /                     |.
+        \\                          /                       |.
+          \\                      /                         |.
+           \|                   /                           |\
+             \#####\          /                             ||
+         ==###########>     /                               ||
+          \##==      \    /                                 ||
+     ______ =       =|__/___                                ||
+ ,--' ,----`-,__ ___/'  --,-`-==============================##==========>
+\               '        ##_______ ______   ______,--,____,=##,__
+ `,    __==    ___,-,__,--'#'  ==='      `-'              | ##,-/
+   `-,____,---'       \####\              |        ____,--\_##,/
+       #_              |##   \  _____,---==,__,---'         ##
+        #              ]===--==\                            ||
+        #,             ]         \                          ||
+         #_            |           \                        ||
+          ##_       __/'             \                      ||
+           ####='     |                \                    |/
+            ###       |                  \                  |.
+            ##       _'                    \                |.
+           ###=======]                       \              |.
+          ///        |                         \           ,|.
+          //         |                           \         |.
+                                                   \      ,|.
+                                                     \    |.
+                                                       \  |.
+                                                         \|.
+                                                         /.
+                                                        |
+";
+            string asciisword = @"
+                 /\
+                /  |
+  *            /  /________________________________________________
+ (O)77777777777)  7                                                `~~--__
+8OO>>>>>>>>>>>>] <===========================================>          __-
+ (O)LLLLLLLLLLL)  L________________________________________________.--~~
+  *            \  \
+                \  |
+                 \/
+";
+            string asciishield = @"
+ _________________________ 
+|<><><>     |  |    <><><>|
+|<>         |  |        <>|
+|           |  |          |
+|  (______ <\-/> ______)  |
+|  /_.-=-.\| ' |/.-=-._\  |
+|   /_    \(o_o)/    _\   |
+|    /_  /\/ ^ \/\  _\    |
+|      \/ | / \ | \/      |
+|_______ /((( )))\ _______|
+|      __\ \___/ /__      |
+|--- (((---'   '---))) ---|
+|           |  |          |
+|           |  |          |
+:           |  |          :
+ \<>        |  |       <>/
+  \<>       |  |      <>/
+   \<>      |  |     <>/
+    `\<>    |  |   <>/'
+      `\<>  |  |  <>/'
+        `\<>|  |<>/'
+          `-.  .-`
+            '--'
+";
+            string died = @"
+	
+     .... NO! ...                  ... MNO! ...
+   ..... MNO!! ...................... MNNOO! ...
+ ..... MMNO! ......................... MNNOO!! .
+..... MNOONNOO!   MMMMMMMMMMPPPOII!   MNNO!!!! .
+ ... !O! NNO! MMMMMMMMMMMMMPPPOOOII!! NO! ....
+    ...... ! MMMMMMMMMMMMMPPPPOOOOIII! ! ...
+   ........ MMMMMMMMMMMMPPPPPOOOOOOII!! .....
+   ........ MMMMMOOOOOOPPPPPPPPOOOOMII! ...
+    ....... MMMMM..    OPPMMP    .,OMI! ....
+     ...... MMMM::   o.,OPMP,.o   ::I!! ...
+         .... NNM:::.,,OOPM!P,.::::!! ....
+          .. MMNNNNNOOOOPMO!!IIPPO!!O! .....
+         ... MMMMMNNNNOO:!!:!!IPPPPOO! ....
+           .. MMMMMNNOOMMNNIIIPPPOO!! ......
+          ...... MMMONNMMNNNIIIOO!..........
+       ....... MN MOMMMNNNIIIIIO! OO ..........
+    ......... MNO! IiiiiiiiiiiiI OOOO ...........
+  ...... NNN.MNO! . O!!!!!!!!!O . OONO NO! ........
+   .... MNNNNNO! ...OOOOOOOOOOO .  MMNNON!........
+   ...... MNNNNO! .. PPPPPPPPP .. MMNON!........
+      ...... OO! ................. ON! .......
+         ................................";
+            string lived = @"
+███████████████████████████████████████
+█████████████▓▒░░░░░░░░▒███████████████
+███████████▓░░░░░░░░░░░░░▒█████████████
+██████████▒░░░▓▓░░░░░░░░░░░▓███████████
+█████████░░░░████░░░░░░░░░░░▒██████████
+████████░░░░▓█┌┌██░░░░░░░░░░░░█████████
+███████░░░░░█▓┌┌┌██░░░░░░░░░░░▒████████
+██████░░░░░░▓▓┌┌┌┌█▒░░░░░░░░░░░▓███████
+████▓░░░░░░░░█┌┌┌┌┌█░░░░░░░░░░░░░██████
+████░░░░░░░░░█▒┌┌┌┌█▓░░░░░░░░░░░░▓█████
+███▓░░░░░░░░░█▓┌┌┌┌▓█░░░░░░░░░░░░░█████
+███░░░░░░░░░░▓█┌┌┌┌░█░░░░░░░░░░░░░▓████
+██▓░░░░░░░░░░▓█┌┌┌┌▒█░░░░░░░░░░░░░░████
+██▒░░░░░░░░░░▒█┌┌┌┌▓█░░░░░░░░░░░░░░▓███
+██░░░░░░░░░░░▒█┌┌┌┌▓▓░░░░░░░░░░░░░░▒███
+█▓░░░░░░░░░░░▓█┌┌┌┌█▓░░▒▒▒░░░░░░░░░░███
+█▒░░░░░░░░░░░█▓┌┌┌┌▓█████████▓░░░░░░███
+█░░░░░░░░░░░░█░┌┌┌┌┌█▒┌┌┌┌░▒███▓░░░░███
+█░░░░░░░░░░░▓█┌┌┌┌┌┌█┌┌┌┌░▓▓┌┌▒██░░░███
+█░░░░░░░░░░░█▒┌┌┌┌┌┌█░┌▓██▓▒┌┌┌┌██░░███
+█░░░░░░░░░░▓█┌┌┌┌┌┌┌█┌▓█▒┌┌┌┌┌┌┌┌█░░███
+█░░░░░░░░░▒█┌┌┌┌┌┌┌░██▓┌┌┌┌┌┌┌┌┌░█░░███
+█░░░░░░░░░█▓┌┌┌┌┌┌┌████┌┌┌┌┌┌┌┌▒█▓░░███
+█░░░░░░░░░█░┌┌┌┌┌┌┌█░┌██▒┌┌┌▒██▓▒█░░███
+█░░░░░░░░▒█┌┌┌┌┌┌┌┌┌┌┌░███████░┌┌█▒░███
+█░░░░░░░░▓█┌┌┌┌┌┌┌┌┌┌▒█┌┌┌┌┌┌┌┌┌┌▓▓░███
+█░░░░░░░░█▓┌┌┌┌┌┌┌┌┌▓█┌┌┌┌┌┌┌┌┌┌┌█▓░███
+█░░░░░████▒┌┌┌┌┌┌┌┌┌░█┌┌┌┌┌┌┌┌┌▒██░░███
+█░░░░▓██▓█┌┌┌┌┌┌┌┌┌┌┌██▓░┌░▒▓██▓█▓░░███
+█░░░░██┌┌█┌┌┌┌┌┌┌┌┌┌░▓▒██████▓┌┌┌█░░███
+█▓░░░█▒┌░█┌┌┌┌┌┌┌┌┌┌▓█┌┌┌┌┌┌┌┌┌┌▒█░░███
+██░░░█▒┌┌█┌┌┌┌┌┌┌┌┌▓███┌┌┌┌┌┌┌┌┌█▓░▒███
+██▒░░▓▓┌┌█▒┌┌┌┌┌┌┌┌█░┌██▒┌┌┌┌┌░██░░████
+███░░▒█┌┌▒█┌┌┌┌┌┌┌┌█┌┌┌▓███▓████▒░░████
+███░░░█▓┌┌█▓┌┌┌┌┌┌┌█▒┌┌┌┌▓███▓░█░░▓████
+███▓░░▒█┌┌┌█▓┌┌┌┌┌┌▒█┌┌┌┌┌┌┌┌┌▓█░░█████
+█████░░░█▓┌┌┌▓██▓┌┌┌┌█▓░┌┌┌▒██▒░░██████
+█████▓░░░██┌┌┌█████▒┌┌▓█████▓░░░███████
+██████░░░░█████▒░▒████████▓░░░░▓███████
+███████░░░░▓██▓░░░░░░▒▒░░░░░░░▒████████
+████████░░░░░░░░░░░░░░░░░░░░░▒█████████
+██████████▒░░░░░░░░░░░░░░░░▓███████████
+████████████▒░░░░░░░░░░░░▒█████████████
+";
             double death = 0;
-
+            Console.Clear();
             Write("You awake in a dark room.");
             Write("As you look around you see three pedestals, each with a different item.");
-            Write("A bow, A sword and a shield.");
+            Write("A bow");
+            WriteAscii(asciibow);
+            Write("A sword");
+            WriteAscii(asciisword);
+            Write("And a shield.");
+            WriteAscii(asciishield);
             Write("You wonder which one to choose.");
-            Write("Bow");
+            Write("\nBow");
             Write("Sword");
             Write("Shield");
+
             Console.Write("\nChoose one: ");
             c1 = Console.ReadLine();
             c1 = c1.ToLower();
@@ -42,6 +205,7 @@ namespace Mini_DnD
             {
                 death = 1;
                 Write("You failed to choose and died as a consequence.");
+                WriteAscii(died);
             }
             if (death == 0)
             {
@@ -67,6 +231,8 @@ namespace Mini_DnD
                         Write("As your walking along you hear a click under your foot.");
 
                         Write("\nYou Died!");
+                        WriteAscii(died);
+
                     }
                     if (c2 == "east")
                     {
@@ -79,12 +245,15 @@ namespace Mini_DnD
                             Write("You follow the footsteps to a big wooden door with traces of sunlight slipping through.");
 
                             Write("You Survived");
+                            WriteAscii(lived);
                         }
                         else
                         {
                             Write($"As you push deeper into the unknown you find yourself stuck between the wall and the {c1}.");
 
                             Write("\nYou Died!");
+                            WriteAscii(died);
+
                         }
                     }
                     if (c2 == "south")
@@ -110,6 +279,7 @@ namespace Mini_DnD
                             Write($"You get out from the water and push through the ivy towards the sunlight.");
 
                             Write($"\nYou Survived!");
+                            WriteAscii(lived);
                         }
                         else
                         {
@@ -118,6 +288,8 @@ namespace Mini_DnD
                             Write("As your walking you hear a click under your foot.");
 
                             Write("\nYou Died!");
+                            WriteAscii(died);
+
                         }
                     }
                     if (c2 == "west")
@@ -137,6 +309,7 @@ namespace Mini_DnD
                             Write("As your vision returns to you you find youself standing in the middle of a town.");
 
                             Write("\nYou Survived!");
+                            WriteAscii(lived);
                         }
                         else
                         {
@@ -145,8 +318,16 @@ namespace Mini_DnD
                             Write("Immediately as you do so you feel your vision darken.");
 
                             Write("\nYou Died!");
+                            WriteAscii(died);
+
                         }
                     }
+                }
+                else
+                {
+                    death = 1;
+                    Write("You failed to choose and died as a consequence.");
+                    WriteAscii(died);
                 }
             }
         }

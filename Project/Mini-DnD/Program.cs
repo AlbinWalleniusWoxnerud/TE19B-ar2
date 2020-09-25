@@ -5,18 +5,18 @@ namespace Mini_DnD
 {
     class Program
     {
-        static void Write(string strin)
+        static void Write(string strin) // Kool cod som gör att den skriver ut långsammare, fick hjälp av Theodor
         {
             for (int i = 0; i <= strin.Length - 1; i++)
             {
                 Console.ForegroundColor = ConsoleColor.White;
-                Thread.Sleep(2);
+                Thread.Sleep(20);
                 Console.Write(strin.Substring(i, 1));
             }
             if (strin.Length <= 10) Thread.Sleep(500);
             Console.WriteLine();
         }
-        static void WriteAscii(string stri)
+        static void WriteAscii(string stri) // Gör samma sak fast snabbare för ASCII art:en
         {
             for (int i = 0; i <= stri.Length - 1; i++)
             {
@@ -27,6 +27,7 @@ namespace Mini_DnD
         }
         static void Main(string[] args)
         {
+            // Viabler och ASCII-art
             string c1;
             string c2;
             string asciibow = @"
@@ -177,7 +178,9 @@ namespace Mini_DnD
 ████████████▒░░░░░░░░░░░░▒█████████████
 ";
             double death = 0;
-            Console.Clear();
+            Console.Clear(); //Rensar consolen
+
+            // Dialog
             Write("You awake in a dark room.");
             Write("As you look around you see three pedestals, each with a different item.");
             Write("A bow");
@@ -191,24 +194,29 @@ namespace Mini_DnD
             Write("Sword");
             Write("Shield");
 
+            // Val 1
             Console.Write("\nChoose one: ");
             c1 = Console.ReadLine();
             c1 = c1.ToLower();
 
             string msg = $"You choose the {c1}.";
 
+            // Om du valde~
             if (c1 == "bow" || c1 == "sword" || c1 == "shield")
             {
                 Write(msg);
             }
+            // Om du inte valde~
             else
             {
                 death = 1;
                 Write("You failed to choose and died as a consequence.");
                 WriteAscii(died);
             }
+            // Om du inte dog
             if (death == 0)
             {
+                // Dialog
                 Write($"As the {c1} enters your hands the pedestals sink into the ground.");
                 Write("With a loud rumble the four walls surrounding you collapse reveling four passages.\n");
                 Write("North ");
@@ -216,6 +224,7 @@ namespace Mini_DnD
                 Write("South");
                 Write("West");
 
+                // Val 2
                 Console.Write("\nChoose a passage: ");
                 c2 = Console.ReadLine();
                 c2 = c2.ToLower();
@@ -224,8 +233,10 @@ namespace Mini_DnD
 
                 if (c2 == "north" || c2 == "east" || c2 == "south" || c2 == "west")
                 {
+                    // Om du valde~
                     if (c2 == "north")
                     {
+                        //Dör alltid
                         Write(msg2 + " Your choice leds you down a long dark tunnel.");
 
                         Write("As your walking along you hear a click under your foot.");
@@ -234,10 +245,12 @@ namespace Mini_DnD
                         WriteAscii(died);
 
                     }
+                    // Om du valde~
                     if (c2 == "east")
                     {
                         Write(msg2 + " Your choice leds you through a tight crevice.");
 
+                        // Om du har bow överlever du
                         if (c1 == "bow")
                         {
                             Write("As you push yourself through you find traces of footsteps.");
@@ -247,6 +260,7 @@ namespace Mini_DnD
                             Write("You Survived");
                             WriteAscii(lived);
                         }
+                        // Har du inte bow dör du
                         else
                         {
                             Write($"As you push deeper into the unknown you find yourself stuck between the wall and the {c1}.");
@@ -256,6 +270,7 @@ namespace Mini_DnD
 
                         }
                     }
+                    // Om du valde~
                     if (c2 == "south")
                     {
                         Write(msg2 + $"Your choice leds you to a deep dark hole with an unfathomable depth.");
@@ -268,6 +283,7 @@ namespace Mini_DnD
 
                         Write($"As you realise what you've just done you start to loudly curse.");
 
+                        // Har du shield överlever du
                         if (c1 == "shield")
                         {
                             Write($"But then you suddenly hear a splash.");
@@ -281,6 +297,7 @@ namespace Mini_DnD
                             Write($"\nYou Survived!");
                             WriteAscii(lived);
                         }
+                        // Har du inte shield dör du
                         else
                         {
                             Write($"Having lost your {c1} combined with not knowing whats at the bottom the hole you start walking back.");
@@ -292,6 +309,7 @@ namespace Mini_DnD
 
                         }
                     }
+                    // Om du valde~
                     if (c2 == "west")
                     {
                         Write(msg2 + " Your choice leds you to a steep staircase.");
@@ -302,6 +320,7 @@ namespace Mini_DnD
 
                         Write("The inscription reads: Insert the holy sword and peace shall be restored.");
 
+                        // Om du har sword överlever du
                         if (c1 == "sword")
                         {
                             Write($"Following the inscription you insert the {c1} and immediately feel your eyes blur.");
@@ -311,6 +330,7 @@ namespace Mini_DnD
                             Write("\nYou Survived!");
                             WriteAscii(lived);
                         }
+                        // Om du inte har sword dör du
                         else
                         {
                             Write($"As you stare dumbly at the insciption you still try to insert your {c1}.");
@@ -323,6 +343,7 @@ namespace Mini_DnD
                         }
                     }
                 }
+                // Om du inte skriver rätr dör du
                 else
                 {
                     death = 1;

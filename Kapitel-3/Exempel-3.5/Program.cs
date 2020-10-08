@@ -6,7 +6,13 @@ namespace Exempel_3._5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string msg;
+            string w1;
+
+            Console.Write("Do: ");
+            w1 = Console.ReadLine();
+
+            Console.WriteLine(msg);
         }
     }
 }

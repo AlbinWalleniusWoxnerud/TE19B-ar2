@@ -1,0 +1,13 @@
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\bin\Debug\netcoreapp3.1\Test-2.exe
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\bin\Debug\netcoreapp3.1\Test-2.deps.json
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\bin\Debug\netcoreapp3.1\Test-2.runtimeconfig.json
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\bin\Debug\netcoreapp3.1\Test-2.runtimeconfig.dev.json
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\bin\Debug\netcoreapp3.1\Test-2.dll
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\bin\Debug\netcoreapp3.1\Test-2.pdb
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\obj\Debug\netcoreapp3.1\Test-2.csprojAssemblyReference.cache
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\obj\Debug\netcoreapp3.1\Test-2.AssemblyInfoInputs.cache
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\obj\Debug\netcoreapp3.1\Test-2.AssemblyInfo.cs
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\obj\Debug\netcoreapp3.1\Test-2.csproj.CoreCompileInputs.cache
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\obj\Debug\netcoreapp3.1\Test-2.dll
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\obj\Debug\netcoreapp3.1\Test-2.pdb
+C:\githubschool\TE19B-ar2\Project\Test-Folder\Test-1\Test-2\obj\Debug\netcoreapp3.1\Test-2.genruntimeconfig.cache

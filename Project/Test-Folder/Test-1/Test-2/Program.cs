@@ -7,6 +7,7 @@ namespace Test_2
         static void Main(string[] args)
         {
             int i1;
+            int p = 0;
 
             while (true)
             {
@@ -17,6 +18,8 @@ namespace Test_2
                     if (i1 == 7)
                     {
                         Console.WriteLine($"Ja, 7 * 6 = 42");
+                        p++;
+                        Console.WriteLine($"Points: {p}");
                         break;
                     }
                     else

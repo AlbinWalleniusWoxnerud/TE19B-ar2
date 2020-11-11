@@ -1,0 +1,13 @@
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\bin\Debug\netcoreapp3.1\Ceasar.exe
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\bin\Debug\netcoreapp3.1\Ceasar.deps.json
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\bin\Debug\netcoreapp3.1\Ceasar.runtimeconfig.json
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\bin\Debug\netcoreapp3.1\Ceasar.runtimeconfig.dev.json
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\bin\Debug\netcoreapp3.1\Ceasar.dll
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\bin\Debug\netcoreapp3.1\Ceasar.pdb
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\obj\Debug\netcoreapp3.1\Ceasar.csprojAssemblyReference.cache
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\obj\Debug\netcoreapp3.1\Ceasar.AssemblyInfoInputs.cache
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\obj\Debug\netcoreapp3.1\Ceasar.AssemblyInfo.cs
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\obj\Debug\netcoreapp3.1\Ceasar.csproj.CoreCompileInputs.cache
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\obj\Debug\netcoreapp3.1\Ceasar.dll
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\obj\Debug\netcoreapp3.1\Ceasar.pdb
+C:\githubschool\TE19B-ar2\Kapitel-4\Ceasar\obj\Debug\netcoreapp3.1\Ceasar.genruntimeconfig.cache

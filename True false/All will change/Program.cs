@@ -1,41 +1,57 @@
 ﻿using System;
+using System.IO;
+using System.Threading;
 
 namespace All_will_change
 {
     class Program
     {
+        static
+        static void slee(string inp)
+        {
+            for (int i = 0; i <= inp.Length - 1; i++)
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Thread.Sleep(20);
+                Console.Write(inp.Substring(i, 1));
+            }
+            if (inp.Length <= 10) Thread.Sleep(500);
+            Console.WriteLine();
+        }
         static void Main()
         {
-            int[] array = { 1, 1, 3, 3, 7, 4, 3, 6, 2, 2, 2, 3, 3, 2, 2 };
-            int amountmax = 0;
-            int[] b = new int[array.Length];
-            for (int a = 0; a < b.Length; a++) b[a] = 1;
-            for (int i = 0; i < array.Length; i++)
+            slee("Detta är Centralrestaurangens bordshanterare\nFil med bordsinformation hittades ej, ny information skapades\n");
+            choise();
+        }
+        static void choise()
+        {
+            slee("Välj ett alternativ\n1.Visa alla bord\n2.Lägg till / ändra bordsinformation\n3.Markera att ett bord är tomt\n4.Avsluta programmet");
+            int a = int.Parse(Console.ReadLine());
+            switch (a)
             {
-                int amount = 0;
-                for (int j = 0; j < array.Length; j++) if (array[i] == array[j]) amount++;
-                if (amountmax < amount) amountmax = amount;
+                case 1:
+                    break;
+                case 2:
+                    bordinfo();
+                    break;
+                case 3:
+                    /* bordtomt(); */
+                    break;
+                case 4:
+                    break;
             }
 
-            for (int i = 0; i < array.Length; i++)
-            {
-                bool tru = false;
-                for (int j = 0; j < i; j++)
-                {
-                    if (array[i] == array[j])
-                    {
-                        tru = true;
-                        break;
-                    }
-                }
+        }
 
-                if (tru) continue;
-
-                int amount = 0;
-                for (int j = 0; j < array.Length; j++) if (array[i] == array[j]) amount++;
-                if (amountmax == amount) Console.WriteLine(array[i]); ;
-            }
-
+        static void bordinfo()
+        {
+            slee("Vilket bordsnummer vill du lägga till/ändra informationen för?");
+            int a = int.Parse(Console.ReadLine());
+            slee("Skriv in bordets namn");
+            string b = Console.ReadLine();
+            slee("Hur många gäster finns vid bordet?");
+            int c = int.Parse(Console.ReadLine());
+            choise();
         }
 
     }

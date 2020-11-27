@@ -1,0 +1,8 @@
+Bord 1 - Namn: a, antal gäster: 10
+Bord 2 - Namn: b, antal gäster: 10
+Bord 3 - Inga gäster
+Bord 4 - Inga gäster
+Bord 5 - Inga gäster
+Bord 6 - Inga gäster
+Bord 7 - Inga gäster
+Bord 8 - Inga gäster

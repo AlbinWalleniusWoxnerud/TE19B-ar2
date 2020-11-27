@@ -4,12 +4,14 @@ using System.Threading;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace All_will_change
+namespace Project_2
 {
     class Program
     {
-        static string[] tempinfo = File.ReadAllLines("bord.txt");
-        static int[] guests = File.ReadAllLines("guests.txt");
+        static int bordsnr = 8;
+        static string[] tempinfo = new string[bordsnr];
+        static int[] guests = new int[bordsnr];
+        static string[] tempguests = new string[bordsnr];
         static void slee(string inp)
         {
             for (int i = 0; i <= inp.Length - 1; i++)
@@ -24,7 +26,31 @@ namespace All_will_change
         static void Main()
         {
             slee("Detta är Centralrestaurangens bordshanterare");
+            check();
             choise();
+        }
+
+        static void check()
+        {
+            if (File.Exists("bord.txt") && File.Exists("guests.txt"))
+            {
+                tempinfo = File.ReadAllLines("bord.txt");
+                string[] tempguests = File.ReadAllLines("guests.txt");
+                for (int i = 0; i < tempguests.Length; i++)
+                {
+                    guests[i] = int.Parse(tempguests[i]);
+                }
+                slee("Bordsinformation kan läsas in från fil");
+                slee("Vill du läsa in filen? J/N");
+                string a = Console.ReadLine().ToLower();
+                if (a != "j") { slee("Ny information skapades"); empty(); }
+                else choise();
+            }
+            else
+            {
+                slee("Fil med bordsinformation hittades ej, ny information skapades");
+                empty();
+            }
         }
         static void choise()
         {
@@ -45,8 +71,8 @@ namespace All_will_change
                 case 4:
                     empty();
                     break;
-
                 case 5:
+                    System.Environment.Exit(0);
                     break;
             }
         }
@@ -74,6 +100,7 @@ namespace All_will_change
             string b = Console.ReadLine();
             slee("Hur många gäster finns vid bordet?");
             guests[a] = int.Parse(Console.ReadLine());
+            tempguests[a] = ($"{guests[a]}");
             tempinfo[a] = ($"Bord {a + 1} - Namn: {b}, antal gäster: {guests[a]}");
             update();
         }
@@ -91,12 +118,19 @@ namespace All_will_change
 
         static void update()
         {
+            File.WriteAllLines("guests.txt", tempguests);
             File.WriteAllLines("bord.txt", tempinfo);
             choise();
         }
 
         static void empty()
         {
+            for (int i = 0; i < tempinfo.Length; i++)
+            {
+                tempguests[i] = "0";
+            }
+            File.WriteAllLines("guests.txt", tempguests);
+
             for (int i = 0; i < tempinfo.Length; i++)
             {
                 tempinfo[i] = ($"Bord {i + 1} - Inga gäster");

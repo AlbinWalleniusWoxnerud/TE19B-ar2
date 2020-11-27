@@ -1,5 +1,5 @@
-Bord 1 - Namn: a, antal gäster: 10
-Bord 2 - Namn: b, antal gäster: 10
+Bord 1 - Namn: albin, antal gäster: 10
+Bord 2 - Inga gäster
 Bord 3 - Inga gäster
 Bord 4 - Inga gäster
 Bord 5 - Inga gäster

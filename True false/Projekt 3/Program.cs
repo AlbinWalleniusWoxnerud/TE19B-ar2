@@ -11,8 +11,12 @@ namespace Projekt_3
         static int boardheight = 4;
         static int boardwidth = 6;
         static int boats = 2;
+        static int player_hit = 0;
+        static int computer_hit = 0;
         static int shot_x;
         static int shot_y;
+        static int computer_shot_x;
+        static int computer_shot_y;
         static string[,] player = new string[boardheight, boardwidth];
         static string[,] computer = new string[boardheight, boardwidth];
         static string[,] computerfalse = new string[boardheight, boardwidth];
@@ -59,7 +63,7 @@ namespace Projekt_3
             {
                 for (int j = 0; j < boardwidth; j++)
                 {
-                    player[i, j] = "0";
+                    player[i, j] = "-";
                 }
             }
 
@@ -78,14 +82,13 @@ namespace Projekt_3
                     computerfalse[i, j] = "-";
                 }
             }
-
+            player_hit = 0;
+            computer_hit = 0;
             boat();
         }
 
         static void draw()
         {
-            bool gameover = false;
-
             slee("Game start\nYour turn!\n\nYour board");
             for (int i = 0; i < boardheight; i++)
             {
@@ -95,23 +98,17 @@ namespace Projekt_3
                 }
                 Console.WriteLine();
             }
+
             slee("\n\nComputer board");
-            int limit = 1;
             for (int i = 0; i < boardheight; i++)
             {
                 for (int j = 0; j < boardwidth; j++)
                 {
-                    if (computer[shot_y, shot_x] == "X" && limit == 1)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write("X");
-                        Console.ResetColor();
-                    }
-                    else Console.Write(computerfalse[i, j]);
-                    limit--;
+                    Console.Write(computerfalse[i, j]);
                 }
                 Console.WriteLine();
             }
+
             slee("\n\nComputer true board");
             for (int i = 0; i < boardheight; i++)
             {
@@ -133,13 +130,13 @@ namespace Projekt_3
                 int player_boat_pos_y = ran.Next(0, boardwidth);
                 int computer_boat_pos_x = ran.Next(0, boardheight);
                 int computer_boat_pos_y = ran.Next(0, boardwidth);
-                if (player[player_boat_pos_x, player_boat_pos_y] == "X" || computer[computer_boat_pos_x, computer_boat_pos_y] == "X")
+                if (player[player_boat_pos_x, player_boat_pos_y] == "O" || computer[computer_boat_pos_x, computer_boat_pos_y] == "X")
                 {
                     if (i == 0) i = 0;
                     else i--;
                     continue;
                 }
-                player[player_boat_pos_x, player_boat_pos_y] = "X";
+                player[player_boat_pos_x, player_boat_pos_y] = "O";
                 computer[computer_boat_pos_x, computer_boat_pos_y] = "X";
             }
             draw();
@@ -156,12 +153,48 @@ namespace Projekt_3
 
             if (computer[shot_y, shot_x] == "X")
             {
-                Console.ForegroundColor = ConsoleColor.Red;
+                player_hit++;
                 computerfalse[shot_y, shot_x] = "X";
-                Console.ResetColor();
             }
-            computerfalse[shot_y, shot_x] = "0";
-            draw();
+            else computerfalse[shot_y, shot_x] = "0";
+            computer_shot();
+        }
+        static void computer_shot()
+        {
+            Random ran = new Random();
+            int computer_shot_y = ran.Next(0, boardheight);
+            int computer_shot_x = ran.Next(0, boardwidth);
+
+            if (player[computer_shot_y, computer_shot_x] == "O")
+            {
+                computer_hit++;
+                player[computer_shot_y, computer_shot_x] = "X";
+            }
+            else player[computer_shot_y, computer_shot_x] = "M";
+            check();
+        }
+
+        static void check()
+        {
+            if (player_hit == boats && computer_hit == boats)
+            {
+                slee("\n\nDraw, No Winner!");
+                choise();
+            }
+            else if (player_hit == boats)
+            {
+                slee("\n\nYou win!");
+                choise();
+            }
+            else if (computer_hit == boats)
+            {
+                slee("\n\nComputers wins, you lose!");
+                choise();
+            }
+            else
+            {
+                draw();
+            }
         }
 
     }

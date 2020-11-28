@@ -27,9 +27,18 @@ namespace Projekt_3
             {
                 string b = a.Substring(i, 1);
                 Console.Write(a[i]);
-                Thread.Sleep(1);
+                Thread.Sleep(25);
             }
             Console.WriteLine();
+        }
+        static void slow_slee(string a)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                string b = a.Substring(i, 1);
+                Console.Write(a[i]);
+                Thread.Sleep(100);
+            }
         }
         static void Main()
         {
@@ -58,7 +67,7 @@ namespace Projekt_3
         }
         static void reset()
         {
-            slee("Settings boards");
+            slee("\nSettings boards");
             for (int i = 0; i < boardheight; i++)
             {
                 for (int j = 0; j < boardwidth; j++)
@@ -84,40 +93,43 @@ namespace Projekt_3
             }
             player_hit = 0;
             computer_hit = 0;
+            slee("\nPress any key so start!");
+            Console.ReadKey();
+            slee("Game starting!");
             boat();
         }
 
         static void draw()
         {
-            slee("Game start\nYour turn!\n\nYour board");
+            slee("\nYour board:");
             for (int i = 0; i < boardheight; i++)
             {
                 for (int j = 0; j < boardwidth; j++)
                 {
-                    Console.Write(player[i, j]);
+                    slow_slee(player[i, j]);
                 }
                 Console.WriteLine();
             }
 
-            slee("\n\nComputer board");
+            slee("\n\nComputer board:");
             for (int i = 0; i < boardheight; i++)
             {
                 for (int j = 0; j < boardwidth; j++)
                 {
-                    Console.Write(computerfalse[i, j]);
+                    slow_slee(computerfalse[i, j]);
                 }
                 Console.WriteLine();
             }
 
-            slee("\n\nComputer true board");
+            /* slee("\n\nComputer true board");
             for (int i = 0; i < boardheight; i++)
             {
                 for (int j = 0; j < boardwidth; j++)
                 {
-                    Console.Write(computer[i, j]);
+                    slow_slee(computer[i, j]);
                 }
                 Console.WriteLine();
-            }
+            } */
             shot();
         }
 
@@ -144,10 +156,10 @@ namespace Projekt_3
 
         static void shot()
         {
-            slee("\nWhere do you want to shoot? (Y)");
+            slee("\nWhere do you want to shoot? (Y, 1-4)");
             shot_y = int.Parse(Console.ReadLine());
             shot_y--;
-            slee("Where do you want to shoot? (X)");
+            slee("Where do you want to shoot? (X, 1-6)");
             shot_x = int.Parse(Console.ReadLine());
             shot_x--;
 

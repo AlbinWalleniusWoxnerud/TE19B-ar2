@@ -1,55 +1,86 @@
 ﻿using System;
 using System.IO;
+using System.Threading;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace Tester
 {
     class Program
     {
+        static int boardheight = 10;
+        static int boardwidth = 10;
+        static string[,] player = new string[boardheight, boardwidth];
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Detta program skriver och läser information från filer");
-            Console.WriteLine();
-            string[] temp = namn;
-            string[] namn = new string[9];
-            for (int i = 0; i < 10; i++)
+            // Declare the array of four elements:  
+            /*  string[][] jaggedArray = new string[4][];
+             // Initialize the elements:  
+             jaggedArray[0] = new string[6] { "0", "0", "0", "0", "0", "0" };
+             jaggedArray[1] = new string[6] { "0", "0", "0", "0", "0", "0" };
+             jaggedArray[2] = new string[6] { "0", "0", "0", "0", "0", "0" };
+             jaggedArray[3] = new string[6] { "0", "0", "0", "0", "0", "0" };
+
+             // Display the array elements:  
+             for (int i = 0; i < jaggedArray.Length; i++)
+             {
+                 System.Console.Write("Element({0}): ", i + 1);
+                 for (int j = 0; j < jaggedArray[i].Length; j++)
+                 {
+                     System.Console.Write(jaggedArray[i][j] + " ");
+                 }
+                 System.Console.WriteLine();
+             }
+             for (int i = 0; i < jaggedArray.Length; i++)
+             {
+                 for (int j = 0; j < jaggedArray[i].Length; j++)
+                 {
+                     string[] etstst = jaggedArray[i];
+                     File.WriteAllLines("test.txt", etstst);
+                 }
+             } */
+
+            for (int k = 0; k < 1; k++)
             {
-                namn[i] = "Hello";
+                for (int i = 0; i < boardheight; i++)
+                {
+                    for (int j = 0; j < boardwidth; j++)
+                    {
+                        player[i, j] = "O ";
+                    }
+                }
+                Random ran = new Random();
+                for (int i = 0; i < 1; i++)
+                {
+                    /* int player_boat_pos_x = ran.Next(0, 10);
+                    int player_boat_pos_y = ran.Next(0, 10); */
+                    int player_boat_pos_x = 0;
+                    int player_boat_pos_y = 9;
+                    if (player[player_boat_pos_x, player_boat_pos_y] == "X ")
+                    {
+                        if (i == 0)
+                        {
+                            i = 0;
+                        }
+                        else
+                        {
+                            i--;
+                        }
+                        continue;
+                    }
+                    player[player_boat_pos_x, player_boat_pos_y] = "X ";
+                }
+                for (int i = 0; i < boardheight; i++)
+                {
+                    for (int j = 0; j < boardwidth; j++)
+                    {
+                        Console.Write(player[i, j]);
+                    }
+                    Console.WriteLine();
+                }
             }
-
-            // Skapa eller skriv över fil1.txt
-            File.WriteAllText("fil1.txt", "Detta skrivs i fil 1");
-
-            // Skapa eller skriv över fil2.txt
-            File.WriteAllLines("fil2.txt", namn);
-
-            // Läs in och skriv ut innehållet i fil1.txt
-            Console.WriteLine("Här är innehållet i fil1.txt");
-            string fil1Innehåll = File.ReadAllText("fil1.txt");
-            Console.WriteLine(fil1Innehåll);
-            Console.WriteLine();
-
-            // Läs in innehållet i fil2.txt.
-            string[] fil2Innehåll = File.ReadAllLines("fil2.txt");
-
-            // Skriv ut varje rad från fil2.txt på var sin rad
-            Console.WriteLine("Här är innehållet i fil2.txt");
-            foreach (string rad in fil2Innehåll)
-            {
-                Console.WriteLine(rad);
-            }
-            Console.WriteLine();
-
-            // Kolla om det finns en fil som heter fil1.txt
-            if (File.Exists("fil1.txt"))
-            {
-                Console.WriteLine("Det finns en fil som heter fil1.txt");
-            }
-            else
-            {
-                Console.WriteLine("Det finns INTE en fil som heter fil1.txt");
-            }
-
-            // Avsluta inte direkt
-            Console.ReadKey();
         }
     }
 }
+

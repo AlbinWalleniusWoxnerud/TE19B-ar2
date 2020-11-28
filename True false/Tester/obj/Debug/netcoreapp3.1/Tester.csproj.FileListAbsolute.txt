@@ -11,3 +11,16 @@ C:\githubschool\TE19B-ar2\True false\Tester\bin\Debug\netcoreapp3.1\Tester.pdb
 C:\githubschool\TE19B-ar2\True false\Tester\obj\Debug\netcoreapp3.1\Tester.dll
 C:\githubschool\TE19B-ar2\True false\Tester\obj\Debug\netcoreapp3.1\Tester.pdb
 C:\githubschool\TE19B-ar2\True false\Tester\obj\Debug\netcoreapp3.1\Tester.genruntimeconfig.cache
+D:\TE19B-ar2\True false\Tester\obj\Debug\netcoreapp3.1\Tester.csprojAssemblyReference.cache
+D:\TE19B-ar2\True false\Tester\obj\Debug\netcoreapp3.1\Tester.AssemblyInfoInputs.cache
+D:\TE19B-ar2\True false\Tester\obj\Debug\netcoreapp3.1\Tester.AssemblyInfo.cs
+D:\TE19B-ar2\True false\Tester\obj\Debug\netcoreapp3.1\Tester.csproj.CoreCompileInputs.cache
+D:\TE19B-ar2\True false\Tester\obj\Debug\netcoreapp3.1\Tester.dll
+D:\TE19B-ar2\True false\Tester\obj\Debug\netcoreapp3.1\Tester.pdb
+D:\TE19B-ar2\True false\Tester\bin\Debug\netcoreapp3.1\Tester.exe
+D:\TE19B-ar2\True false\Tester\bin\Debug\netcoreapp3.1\Tester.deps.json
+D:\TE19B-ar2\True false\Tester\bin\Debug\netcoreapp3.1\Tester.runtimeconfig.json
+D:\TE19B-ar2\True false\Tester\bin\Debug\netcoreapp3.1\Tester.runtimeconfig.dev.json
+D:\TE19B-ar2\True false\Tester\bin\Debug\netcoreapp3.1\Tester.dll
+D:\TE19B-ar2\True false\Tester\bin\Debug\netcoreapp3.1\Tester.pdb
+D:\TE19B-ar2\True false\Tester\obj\Debug\netcoreapp3.1\Tester.genruntimeconfig.cache

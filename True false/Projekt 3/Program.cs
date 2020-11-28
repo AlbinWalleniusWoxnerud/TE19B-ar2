@@ -161,16 +161,27 @@ namespace Projekt_3
         }
         static void computer_shot()
         {
-            Random ran = new Random();
-            int computer_shot_y = ran.Next(0, boardheight);
-            int computer_shot_x = ran.Next(0, boardwidth);
-
-            if (player[computer_shot_y, computer_shot_x] == "O")
+            for (int i = 0; i < 1; i++)
             {
-                computer_hit++;
-                player[computer_shot_y, computer_shot_x] = "X";
+                Random ran = new Random();
+                int computer_shot_y = ran.Next(0, boardheight);
+                int computer_shot_x = ran.Next(0, boardwidth);
+
+                if (player[computer_shot_y, computer_shot_x] == "O")
+                {
+                    computer_hit++;
+                    player[computer_shot_y, computer_shot_x] = "X";
+                }
+                else if (player[computer_shot_y, computer_shot_x] == "M")
+                {
+                    i--;
+                    continue;
+                }
+                else
+                {
+                    player[computer_shot_y, computer_shot_x] = "M";
+                }
             }
-            else player[computer_shot_y, computer_shot_x] = "M";
             check();
         }
 

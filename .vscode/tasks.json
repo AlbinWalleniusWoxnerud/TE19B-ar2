@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/True false/Projekt 2/All will change.csproj",
+                "${workspaceFolder}/True false/Projekt 3/Projekt 3.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/True false/Projekt 2/All will change.csproj",
+                "${workspaceFolder}/True false/Projekt 3/Projekt 3.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/True false/Projekt 2/All will change.csproj",
+                "${workspaceFolder}/True false/Projekt 3/Projekt 3.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],

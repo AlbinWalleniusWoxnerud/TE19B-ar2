@@ -82,7 +82,7 @@ namespace Projekt_3
             boat();
         }
 
-        static void play()
+        static void draw()
         {
             bool gameover = false;
 
@@ -114,7 +114,8 @@ namespace Projekt_3
                         Console.Write("X");
                         Console.ResetColor();
                     }
-                    else Console.Write(computerfalse[i, j]);
+                    else
+                        Console.Write(computerfalse[i, j]);
                 }
                 Console.WriteLine();
             }
@@ -148,7 +149,7 @@ namespace Projekt_3
                 player[player_boat_pos_x, player_boat_pos_y] = "X";
                 computer[computer_boat_pos_x, computer_boat_pos_y] = "X";
             }
-            play();
+            draw();
         }
 
         static void shot()
@@ -163,7 +164,7 @@ namespace Projekt_3
             {
                 computerfalse[shot_y, shot_x] = "X";
             }
-            play();
+            draw();
         }
 
     }

@@ -101,21 +101,14 @@ namespace Projekt_3
             {
                 for (int j = 0; j < boardwidth; j++)
                 {
-                    if (computerfalse[i, j] == "X")
+                    if (computer[shot_y, shot_x] == "X" && limit == 1)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("X");
                         Console.ResetColor();
                     }
-                    else if (computer[i, j] == computer[shot_y, shot_x] && computer[shot_y, shot_x] == "X" && limit == 1)
-                    {
-                        limit = 0;
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write("X");
-                        Console.ResetColor();
-                    }
-                    else
-                        Console.Write(computerfalse[i, j]);
+                    else Console.Write(computerfalse[i, j]);
+                    limit--;
                 }
                 Console.WriteLine();
             }
@@ -160,10 +153,14 @@ namespace Projekt_3
             slee("Where do you want to shoot? (X)");
             shot_x = int.Parse(Console.ReadLine());
             shot_x--;
+
             if (computer[shot_y, shot_x] == "X")
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 computerfalse[shot_y, shot_x] = "X";
+                Console.ResetColor();
             }
+            computerfalse[shot_y, shot_x] = "0";
             draw();
         }
 

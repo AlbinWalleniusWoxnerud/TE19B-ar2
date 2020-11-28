@@ -47,7 +47,7 @@ namespace Projekt_3
         }
         static void choise()
         {
-            slee("Choose an alternative\n1.Play\n2.Last Winner\n3.Scoreboard\n4.Exit");
+            slee("Choose an alternative\n1.Play\n2.Game rules\n3.Last Winner\n4.Scoreboard\n5.Exit");
             int choise_input = int.Parse(Console.ReadLine());
             switch (choise_input)
             {
@@ -55,6 +55,7 @@ namespace Projekt_3
                     reset();
                     break;
                 case 2:
+                    rules();
                     break;
                 case 3:
                     break;
@@ -218,6 +219,58 @@ namespace Projekt_3
             {
                 draw();
             }
+        }
+        static void rules()
+        {
+            slee($"\nGame rules:\nBoardheight: {boardheight}\nBoardwidth: {boardwidth}\nBoats: {boats}");
+            slee("\nChoose an alternative\n1.Change the rules\n2.Reset the rules\n3.Return to menu");
+            int rules_ans = int.Parse(Console.ReadLine());
+            switch (rules_ans)
+            {
+                case 1:
+                    change_rules();
+                    break;
+
+                case 2:
+                    reset_rules();
+                    break;
+
+                case 3:
+                    choise();
+                    break;
+            }
+        }
+
+        static void change_rules()
+        {
+            slee("Are you sure would like to change the rules? Y/N ");
+            string rules_ans = Console.ReadLine().ToLower();
+            if (rules_ans == "y")
+            {
+                slee("Change boardheight to: ");
+                boardheight = int.Parse(Console.ReadLine());
+                slee("Change boardwidth to: ");
+                boardwidth = int.Parse(Console.ReadLine());
+                slee("Change boat amount to: ");
+                boats = int.Parse(Console.ReadLine());
+                slee("\nRules changed!");
+                choise();
+            }
+            else
+            {
+                choise();
+            }
+        }
+
+        static void reset_rules()
+        {
+            slee("Resetting game rules...");
+            boardheight = 4;
+            boardwidth = 6;
+            boats = 2;
+            Thread.Sleep(200);
+            slee("\nRules reset!");
+            choise();
         }
 
     }

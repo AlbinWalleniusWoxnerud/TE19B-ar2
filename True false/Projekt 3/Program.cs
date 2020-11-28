@@ -92,6 +92,7 @@ namespace Projekt_3
                     computerfalse[i, j] = "-";
                 }
             }
+
             player_hit = 0;
             computer_hit = 0;
             slee("\nPress any key so start!");

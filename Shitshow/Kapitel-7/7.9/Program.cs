@@ -6,7 +6,7 @@ namespace Uppgift_7._9
     {
         static void Main(string[] args)
         {
-            string[] array = { "first", "second", "third", "fourth", "fifth" };
+            string[] array = { "first", "second", "third", "fourth", "fifth", "sixth" };
 
             rev(array);
 
@@ -17,8 +17,13 @@ namespace Uppgift_7._9
         }
         static void rev(string[] cod)
         {
-
+            int hef = cod.Length / 2;
+            for (int i = 0; i < hef; i++)
+            {
+                string temp = cod[i];
+                cod[i] = cod[cod.Length - 1 - i];
+                cod[cod.Length - 1 - i] = temp;
+            }
         }
     }
-}
 }

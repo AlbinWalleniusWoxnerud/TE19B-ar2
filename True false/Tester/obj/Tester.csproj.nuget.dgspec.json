@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\TE19B-ar2\\True false\\Tester\\Tester.csproj": {}
+    "d:\\TE19B-ar2\\True false\\Tester\\Tester.csproj": {}
   },
   "projects": {
-    "D:\\TE19B-ar2\\True false\\Tester\\Tester.csproj": {
+    "d:\\TE19B-ar2\\True false\\Tester\\Tester.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\TE19B-ar2\\True false\\Tester\\Tester.csproj",
+        "projectUniqueName": "d:\\TE19B-ar2\\True false\\Tester\\Tester.csproj",
         "projectName": "Tester",
-        "projectPath": "D:\\TE19B-ar2\\True false\\Tester\\Tester.csproj",
+        "projectPath": "d:\\TE19B-ar2\\True false\\Tester\\Tester.csproj",
         "packagesPath": "C:\\Users\\albin\\.nuget\\packages\\",
-        "outputPath": "D:\\TE19B-ar2\\True false\\Tester\\obj\\",
+        "outputPath": "d:\\TE19B-ar2\\True false\\Tester\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\albin\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -50,7 +50,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.404\\RuntimeIdentifierGraph.json"
         }
       }
     }

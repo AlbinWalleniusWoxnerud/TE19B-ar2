@@ -10,21 +10,9 @@ namespace Tester
     {
         static void Main(string[] args)
         {
-            int[] a = { 5, 10, 15 };
-            int[] b = a;
-            Console.WriteLine($"a[1]: {a[1]}, b[1]: {b[1]}");
-
-            b[1] = 20;
-            Console.WriteLine($"a[1]: {a[1]}, b[1]: {b[1]}");
-
-            ÄndraVärde(a);
-            Console.WriteLine($"a[1]: {a[1]}, b[1]: {b[1]}");
-
-        }
-
-        static void ÄndraVärde(int[] talArray)
-        {
-            talArray[1] = 25;
+            string a = "hello";
+            char b = a[0];
+            Console.WriteLine(a);
         }
     }
 }

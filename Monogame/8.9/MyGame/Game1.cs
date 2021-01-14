@@ -7,42 +7,47 @@ namespace MyGame
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
-        Texture2D narwhalTexture;
-        Vector2 narwhalPos = new Vector2(100, 100);
-        MouseState mousemouse = Mouse.GetState();
+        Texture2D snakeTexture;
+        public int orgheight = snakeTexture.Height;
+        Rectangle snakeRec;
         private SpriteBatch _spriteBatch;
 
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            IsMouseVisible = true;
         }
 
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            IsMouseVisible = true;
+
             base.Initialize();
         }
 
         protected override void LoadContent()
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
-            narwhalTexture = Content.Load<Texture2D>("narwhal");
-
+            snakeTexture = Content.Load<Texture2D>("snake");
+            snakeRec = new Rectangle(100, 200, snakeTexture.Width / 2, snakeTexture.Height / 2);
             // TODO: use this.Content to load your game content here
         }
 
         protected override void Update(GameTime gameTime)
         {
-            mousemouse = Mouse.GetState();
-            float this1X = (narwhalPos.X + (narwhalTexture.Width / 2));
-            float this1Y = (narwhalPos.Y + (narwhalTexture.Height / 2));
-            float thisX = mousemouse.X - this1X;
-            float thisY = mousemouse.Y - this1Y;
-            narwhalPos.X += thisX * 0.2f;
-            narwhalPos.Y += thisY * 0.2f;
-
+            if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
+                Exit();
+            if (snakeTexture.Height == orgheight * 2)
+            {
+                snakeRec.X -= 1;
+                snakeRec.Y -= 1;
+            }
+            if (snakeTexture.Height == orgheight)
+            {
+                snakeRec.X += 1;
+                snakeRec.Y += 1;
+            }
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -54,7 +59,7 @@ namespace MyGame
 
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
-            _spriteBatch.Draw(narwhalTexture, narwhalPos, Color.White);
+            _spriteBatch.Draw(snakeTexture, snakeRec, Color.White);
             _spriteBatch.End();
             base.Draw(gameTime);
         }

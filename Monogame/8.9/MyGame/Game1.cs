@@ -8,7 +8,6 @@ namespace MyGame
     {
         private GraphicsDeviceManager _graphics;
         Texture2D snakeTexture;
-        public int orgheight = snakeTexture.Height;
         Rectangle snakeRec;
         private SpriteBatch _spriteBatch;
 
@@ -22,7 +21,6 @@ namespace MyGame
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
             base.Initialize();
         }
 
@@ -30,7 +28,7 @@ namespace MyGame
         {
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             snakeTexture = Content.Load<Texture2D>("snake");
-            snakeRec = new Rectangle(100, 200, snakeTexture.Width / 2, snakeTexture.Height / 2);
+            snakeRec = new Rectangle(10, 20, snakeTexture.Width / 2, snakeTexture.Height / 2);
             // TODO: use this.Content to load your game content here
         }
 
@@ -38,15 +36,15 @@ namespace MyGame
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            if (snakeTexture.Height == orgheight * 2)
+            if (snakeTexture.Height == snakeTexture.Height * 2)
             {
-                snakeRec.X -= 1;
-                snakeRec.Y -= 1;
+                snakeRec.Width -= 1;
+                snakeRec.Height -= 1;
             }
-            if (snakeTexture.Height == orgheight)
+            if (snakeTexture.Height == snakeTexture.Height)
             {
-                snakeRec.X += 1;
-                snakeRec.Y += 1;
+                snakeRec.Width += 1;
+                snakeRec.Height += 1;
             }
             // TODO: Add your update logic here
 

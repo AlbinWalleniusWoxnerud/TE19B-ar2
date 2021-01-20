@@ -1,8 +1,8 @@
-Bord 1 - Inga gäster
-Bord 2 - Inga gäster
-Bord 3 - Inga gäster
-Bord 4 - Inga gäster
-Bord 5 - Inga gäster
-Bord 6 - Inga gäster
-Bord 7 - Inga gäster
-Bord 8 - Inga gäster
+1;0;Inga gäster
+2;0;Inga gäster
+3;0;Inga gäster
+4;0;Inga gäster
+5;0;Inga gäster
+6;0;Inga gäster
+7;0;Inga gäster
+8;0;Inga gäster

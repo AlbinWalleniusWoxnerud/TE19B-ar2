@@ -8,6 +8,9 @@ namespace MyGame
     {
         private GraphicsDeviceManager _graphics;
         Texture2D snakeTexture;
+        public int oHeight;
+        public int x = 1;
+
         Rectangle snakeRec;
         private SpriteBatch _spriteBatch;
 
@@ -29,23 +32,27 @@ namespace MyGame
             _spriteBatch = new SpriteBatch(GraphicsDevice);
             snakeTexture = Content.Load<Texture2D>("snake");
             snakeRec = new Rectangle(10, 20, snakeTexture.Width / 2, snakeTexture.Height / 2);
+            oHeight = snakeTexture.Height;
+
             // TODO: use this.Content to load your game content here
         }
-
         protected override void Update(GameTime gameTime)
         {
+
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            if (snakeTexture.Height == snakeTexture.Height * 2)
+            if (snakeRec.Height == oHeight * 2)
             {
-                snakeRec.Width -= 1;
-                snakeRec.Height -= 1;
+                x = -1;
             }
-            if (snakeTexture.Height == snakeTexture.Height)
+            System.Console.WriteLine(snakeRec.Height);
+            System.Console.WriteLine(snakeRec.Width);
+            if (snakeRec.Height == oHeight)
             {
-                snakeRec.Width += 1;
-                snakeRec.Height += 1;
+                x = 1;
             }
+            snakeRec.Width += 1 * x;
+            snakeRec.Height += 1 * x;
             // TODO: Add your update logic here
 
             base.Update(gameTime);

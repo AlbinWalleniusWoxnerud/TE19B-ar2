@@ -10,7 +10,7 @@ namespace Project_2
     {
         static int bordsnr = 8;
         static int maxGäster = 8;
-        static string[] tempinfo = new string[bordsnr];
+        static List<string> tempinfo = new List<string>();
         static string path = Directory.GetCurrentDirectory();
         static string[] files = Directory.GetFiles(path, "*.txt", SearchOption.AllDirectories).Where(filename => !filename.EndsWith("FileListAbsolute.txt")).ToArray();
         static string baseName = "Inga gäster";
@@ -55,7 +55,7 @@ namespace Project_2
                         if (files.Length < 2)
                         {
                             fileName = Path.GetFileName(files[0]);
-                            tempinfo = File.ReadAllLines(fileName);
+                            tempinfo = File.ReadAllLines(fileName).ToList();
                             choise1 = false;
                             choise();
                         }
@@ -87,7 +87,7 @@ namespace Project_2
             slee($"Välj vilken av filerna du vill använda: (1-{counter})");
 
             fileName = Path.GetFileName(files[int.Parse(Console.ReadLine()) - 1]);
-            tempinfo = File.ReadAllLines(fileName);
+            tempinfo = File.ReadAllLines(fileName).ToList();
             choise();
         }
         static void choise()
@@ -299,13 +299,14 @@ namespace Project_2
 
         static void update()
         {
+            files = Directory.GetFiles(path, "*.txt", SearchOption.AllDirectories).Where(filename => !filename.EndsWith("FileListAbsolute.txt")).ToArray();
             File.WriteAllLines(fileName, tempinfo);
             choise();
         }
 
         static void empty()
         {
-            for (int i = 0; i < tempinfo.Length; i++)
+            for (int i = 0; i < tempinfo.Count; i++)
             {
                 tempinfo[i] = ($"{i + 1};0;Inga gäster;0;{maxGäster}");
             }
@@ -337,7 +338,23 @@ namespace Project_2
                     string localFile = $"{Console.ReadLine()}.txt";
                     fileName = localFile;
                     string localFilePath = $"{path}\\{localFile}";
-                    File.Create(localFile);
+                    File.Create(localFile).Close();
+
+                    bool choise30 = false;
+                    int fileBordNr = 0;
+                    while (!choise30)
+                    {
+                        bool choise2 = false;
+                        while (!choise2)
+                        {
+                            Console.WriteLine();
+                            slee("Hur många bord ska filen ha? (max 20)");
+                            choise2 = int.TryParse(Console.ReadLine(), out fileBordNr);
+                        }
+                        if (0 < fileBordNr && fileBordNr <= 20) choise30 = true;
+                    }
+                    bordsnr = fileBordNr;
+                    tempinfo[tempinfo.Count - 1] = $"{fileBordNr}";
                     update();
                     break;
 

@@ -1,8 +1,8 @@
-1;0;Inga gäster
-2;0;Inga gäster
-3;0;Inga gäster
-4;0;Inga gäster
-5;0;Inga gäster
-6;0;Inga gäster
-7;0;Inga gäster
-8;0;Inga gäster
+1;0;Inga gäster;0;8
+2;3;tedde;0;8
+3;1;albin;0;8
+4;0;Inga gäster;0;8
+5;0;Inga gäster;0;8
+6;0;Inga gäster;0;8
+7;0;Inga gäster;0;8
+8;0;Inga gäster;0;8

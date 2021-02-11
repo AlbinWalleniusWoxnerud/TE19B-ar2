@@ -51,11 +51,18 @@ namespace Project_2
                 {
                     slee("Vill du läsa in en fil? J/N");
                     string a = Console.ReadLine().ToLower();
-                    if (a == "n") { slee("Ny information skapades"); choise1 = false; empty(); }
+                    if (a == "n")
+                    {
+                        slee("Ny information skapades");
+                        choise1 = false;
+                        empty();
+                        choise();
+                    }
                     if (a == "j")
                     {
                         if (files.Count < 2)
                         {
+                            choise1 = false;
                             fileName = "bord.txt";
                             string[] tempFileNameArray = new string[1];
                             tempFileNameArray[0] = fileName;
@@ -79,6 +86,7 @@ namespace Project_2
             {
                 slee("Filer med bordsinformation hittades ej, ny information skapades");
                 empty();
+                choise();
             }
         }
 
@@ -102,6 +110,7 @@ namespace Project_2
                     {
                         slee("Invalid fileformat, reforming");
                         empty();
+                        choise();
                     }
                 }
             }
@@ -117,6 +126,7 @@ namespace Project_2
                 if (inputCheck == "n") correctInput = false;
                 if (inputCheck == "j")
                 {
+                    correctInput = false;
                     fileName = File.ReadAllText(lastFileNameSaveFile).Trim();
                     tempinfo = File.ReadAllLines(fileName).ToList();
                     choise();
@@ -158,45 +168,51 @@ namespace Project_2
         static void choise()
         {
 
-            bool choise3 = false;
-            int a = 0;
-            while (!choise3)
+            while (true)
             {
-                bool choise2 = false;
-                while (!choise2)
+                bool choise3 = false;
+                int a = 0;
+                while (!choise3)
                 {
-                    Console.WriteLine();
-                    slee("Välj ett alternativ\n1.Visa alla bord\n2.Lägg till / ändra bordsinformation\n3.Nota\n4.Max antal gäster\n5.Markera att ett bord är tomt\n6.Töm alla bord\n7.Sparfiler\n8.Avsluta programmet");
-                    choise2 = int.TryParse(Console.ReadLine(), out a);
+                    bool choise2 = false;
+                    while (!choise2)
+                    {
+                        Console.WriteLine();
+                        slee("Välj ett alternativ\n1.Visa alla bord\n2.Lägg till / ändra bordsinformation\n3.Nota\n4.Max antal gäster\n5.Markera att ett bord är tomt\n6.Töm alla bord\n7.Sparfiler\n8.Avsluta programmet");
+                        choise2 = int.TryParse(Console.ReadLine(), out a);
+                    }
+                    if (0 < a && a < 9) choise3 = true;
                 }
-                if (0 < a && a < 9) choise3 = true;
-            }
-            switch (a)
-            {
-                case 1:
-                    allabord();
-                    break;
-                case 2:
-                    bordinfo();
-                    break;
-                case 3:
-                    nota();
-                    break;
-                case 4:
-                    maxAntal();
-                    break;
-                case 5:
-                    bordtomt();
-                    break;
-                case 6:
-                    empty();
-                    break;
-                case 7:
-                    save();
-                    break;
-                case 8:
-                    System.Environment.Exit(0);
-                    break;
+                switch (a)
+                {
+                    case 1:
+                        allabord();
+                        break;
+                    case 2:
+                        bordinfo();
+                        update();
+                        break;
+                    case 3:
+                        nota();
+                        break;
+                    case 4:
+                        maxAntal();
+                        update();
+                        break;
+                    case 5:
+                        bordtomt();
+                        update();
+                        break;
+                    case 6:
+                        empty();
+                        break;
+                    case 7:
+                        save();
+                        break;
+                    case 8:
+                        System.Environment.Exit(0);
+                        break;
+                }
             }
         }
 
@@ -211,15 +227,15 @@ namespace Project_2
                 guest += int.Parse(singletableinfo[1]);
                 if (singletableinfo[2] != baseName)
                 {
-                    Console.WriteLine($"Bord {singletableinfo[0]} - antal gäster: {singletableinfo[1]} - Namn: { singletableinfo[2]} - Nota: {singletableinfo[3]} kr - Max antal gäster; {singletableinfo[4]}");
+                    slee($"Bord {singletableinfo[0]} - antal gäster: {singletableinfo[1]} - Namn: { singletableinfo[2]} - Nota: {singletableinfo[3]} kr - Max antal gäster; {singletableinfo[4]}");
                 }
                 else
                 {
-                    Console.WriteLine($"Bord {singletableinfo[0]} - inga gäster");
+                    slee($"Bord {singletableinfo[0]} - inga gäster");
                 }
             }
-            Console.WriteLine($"Totalt antal gäster: {guest}");
-            choise();
+            slee($"Totalt antal gäster: {guest}");
+            return;
         }
 
         static void bordinfo()
@@ -260,11 +276,23 @@ namespace Project_2
                 if (0 < antalG && antalG <= maxG) choise4 = true;
             }
             tempinfo[bordNr] = ($"{bordNr + 1};{antalG};{namn};{nota};{maxG}");
-            update();
+            return;
         }
 
         static void nota()
         {
+            string[] getbordinfo = File.ReadAllLines(fileName);
+            List<string> eTable = new List<string>();
+            foreach (string bord in getbordinfo)
+            {
+                string[] singletableinfo = bord.Split(';');
+                if (singletableinfo[2] == baseName) eTable.Add(singletableinfo[0]);
+            }
+            if (eTable.Count == tempinfo.Count)
+            {
+                slee("Alla bord är tomma, notan kan inte ändras.");
+                return;
+            }
             int bordNr = 0;
             int nota = 0;
             bool korrektBord = false;
@@ -273,10 +301,11 @@ namespace Project_2
                 bool korrektNr = false;
                 while (!korrektNr)
                 {
-                    Console.WriteLine("Vilket bords nota vill du ändra? ");
+                    slee("Vilket bords nota vill du ändra? ");
                     korrektNr = int.TryParse(Console.ReadLine(), out bordNr);
                 }
-                if (0 < bordNr && bordNr <= bordsnr) korrektBord = true;
+                if (eTable.Contains($"{bordNr}")) slee("Bord är tomt, välj ett annat bord.");
+                else if (0 < bordNr && bordNr <= bordsnr) korrektBord = true;
             }
             bool korrektNota = false;
 
@@ -290,7 +319,7 @@ namespace Project_2
                     bool rimligt = false;
                     while (!rimligt)
                     {
-                        Console.WriteLine($"Vad ska bord {bordNr} nota vara? (endast heltal)");
+                        slee($"Vad ska bord {bordNr} nota vara? (endast heltal)");
                         rimligt = int.TryParse(Console.ReadLine(), out nota);
                     }
                     if (0 <= nota && nota < 50000) korrektNota = true;
@@ -316,7 +345,7 @@ namespace Project_2
                 bool korrektNr = false;
                 while (!korrektNr)
                 {
-                    Console.WriteLine("Vilket bords max antal vill du ändra? ");
+                    slee("Vilket bords max antal vill du ändra? ");
                     korrektNr = int.TryParse(Console.ReadLine(), out bordNr);
                 }
                 if (0 < bordNr && bordNr < bordsnr) korrektBord = true;
@@ -332,14 +361,14 @@ namespace Project_2
                 bool korrektAntal = false;
                 while (!korrektAntal)
                 {
-                    Console.WriteLine($"Vad är bord {bordNr + 1}'s max antal gäster? (max 20)");
+                    slee($"Vad är bord {bordNr + 1}'s max antal gäster? (max 20)");
                     korrektAntal = int.TryParse(Console.ReadLine(), out maxG);
                 }
                 if (0 < maxG && maxG <= 20) korrektMax = true;
             }
             singleTable[4] = $"{maxG}";
             tempinfo[bordNr] = string.Join(";", singleTable);
-            update();
+            return;
         }
 
         static void bordtomt()
@@ -360,7 +389,7 @@ namespace Project_2
             }
             a -= 1;
             tempinfo[a] = ($"{a + 1};0;Inga gäster;0");
-            update();
+            return;
         }
 
         static void update()
@@ -378,7 +407,7 @@ namespace Project_2
             string[] tempFileNameArray = new string[1];
             tempFileNameArray[0] = fileName;
             File.WriteAllLines(lastFileNameSaveFile, tempFileNameArray);
-            choise();
+            return;
         }
 
         static void empty()
@@ -390,7 +419,7 @@ namespace Project_2
             }
             File.WriteAllText(fileName, string.Empty);
             File.WriteAllLines(fileName, tempinfo);
-            choise();
+            return;
         }
 
         static void save()
@@ -435,6 +464,7 @@ namespace Project_2
                     bordsnr = fileBordNr;
                     // tempinfo[tempinfo.Count - 1] = $"{fileBordNr}";
                     update();
+                    choise();
                     break;
 
                 case 2:
@@ -459,6 +489,7 @@ namespace Project_2
                     }
                     bordsnr = fileBordNr1;
                     update();
+                    choise();
                     break;
             }
         }

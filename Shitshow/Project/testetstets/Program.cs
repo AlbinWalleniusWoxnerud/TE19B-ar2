@@ -45,8 +45,9 @@ namespace Project_2
                     {
                         slee("Ny information skapades");
                         choise1 = false;
-                        empty();
-                        choise();
+                        fileName = "bord.txt";
+                        Empty();
+                        Choise();
                     }
                     if (a == "j")
                     {
@@ -60,14 +61,14 @@ namespace Project_2
 
                             fileName = File.ReadAllText(lastFileNameSaveFile).Trim();
                             tempinfo = File.ReadAllLines(fileName).ToList();
-                            fileCheck();
-                            choise();
+                            FileCheck();
+                            Choise();
                         }
                         else
                         {
                             choise1 = false;
-                            useLast();
-                            check();
+                            UseLast();
+                            Check();
                         }
                     }
                 }
@@ -75,12 +76,12 @@ namespace Project_2
             else
             {
                 slee("Filer med bordsinformation hittades ej, ny information skapades");
-                empty();
-                choise();
+                Empty();
+                Choise();
             }
         }
 
-        static void fileCheck()
+        static void FileCheck()
         {
             string[] getbordinfo = File.ReadAllLines(fileName);
             foreach (string bord in getbordinfo)
@@ -99,14 +100,14 @@ namespace Project_2
                     if (isCorrect == false)
                     {
                         slee("Invalid fileformat, reforming");
-                        empty();
-                        choise();
+                        Empty();
+                        Choise();
                     }
                 }
             }
         }
 
-        static void useLast()
+        static void UseLast()
         {
             bool correctInput = true;
             while (correctInput)
@@ -119,12 +120,12 @@ namespace Project_2
                     correctInput = false;
                     fileName = File.ReadAllText(lastFileNameSaveFile).Trim();
                     tempinfo = File.ReadAllLines(fileName).ToList();
-                    choise();
+                    Choise();
                 }
             }
         }
 
-        static void check()
+        static void Check()
         {
             int counter = 0;
             Console.WriteLine();
@@ -150,12 +151,12 @@ namespace Project_2
 
             fileName = Path.GetFileName(files[whichFile - 1]);
 
-            fileCheck();
+            FileCheck();
             tempinfo = File.ReadAllLines(fileName).ToList();
-            choise();
+            Choise();
         }
 
-        static void choise()
+        static void Choise()
         {
 
             while (true)
@@ -176,28 +177,28 @@ namespace Project_2
                 switch (a)
                 {
                     case 1:
-                        allabord();
+                        AllaBord();
                         break;
                     case 2:
-                        bordinfo();
-                        update();
+                        BordInfo();
+                        Update();
                         break;
                     case 3:
-                        nota();
+                        Nota();
                         break;
                     case 4:
-                        maxAntal();
-                        update();
+                        MaxAntal();
+                        Update();
                         break;
                     case 5:
-                        bordtomt();
-                        update();
+                        BordTomt();
+                        Update();
                         break;
                     case 6:
-                        empty();
+                        Empty();
                         break;
                     case 7:
-                        save();
+                        Save();
                         break;
                     case 8:
                         System.Environment.Exit(0);
@@ -206,7 +207,7 @@ namespace Project_2
             }
         }
 
-        static void allabord()
+        static void AllaBord()
         {
             Console.WriteLine();
             string[] getbordinfo = File.ReadAllLines(fileName);
@@ -228,7 +229,7 @@ namespace Project_2
             return;
         }
 
-        static void bordinfo()
+        static void BordInfo()
         {
 
             bool choise3 = false;
@@ -269,7 +270,7 @@ namespace Project_2
             return;
         }
 
-        static void nota()
+        static void Nota()
         {
             string[] getbordinfo = File.ReadAllLines(fileName);
             List<string> eTable = new List<string>();
@@ -315,8 +316,8 @@ namespace Project_2
                     if (0 <= nota && nota < 50000) korrektNota = true;
                 }
                 singleTableNota[3] = $"{nota}";
-                tempinfo[bordNr] = string.Join(";", singleTableNota);
-                update();
+                tempinfo[bordNr - 1] = string.Join(";", singleTableNota);
+                Update();
             }
             else
             {
@@ -325,7 +326,7 @@ namespace Project_2
 
         }
 
-        static void maxAntal()
+        static void MaxAntal()
         {
             int bordNr = 0;
             int maxG = 0;
@@ -361,7 +362,7 @@ namespace Project_2
             return;
         }
 
-        static void bordtomt()
+        static void BordTomt()
         {
             bool choise2 = false;
 
@@ -382,7 +383,7 @@ namespace Project_2
             return;
         }
 
-        static void update()
+        static void Update()
         {
             files = Directory.GetFiles(path, "*.txt", SearchOption.AllDirectories).Where(filename => !filename.EndsWith("FileListAbsolute.txt")).ToList();
             if (bordsnr > tempinfo.Count)
@@ -400,19 +401,18 @@ namespace Project_2
             return;
         }
 
-        static void empty()
+        static void Empty()
         {
             tempinfo.Clear();
             for (int i = 0; i < 8; i++)
             {
                 tempinfo.Add($"{i + 1};0;Inga gäster;0;{maxGäster}");
             }
-            File.WriteAllText(fileName, string.Empty);
             File.WriteAllLines(fileName, tempinfo);
             return;
         }
 
-        static void save()
+        static void Save()
         {
 
             bool choise3 = false;
@@ -453,13 +453,13 @@ namespace Project_2
                     }
                     bordsnr = fileBordNr;
                     // tempinfo[tempinfo.Count - 1] = $"{fileBordNr}";
-                    update();
-                    choise();
+                    Update();
+                    Choise();
                     break;
 
                 case 2:
                     {
-                        check();
+                        Check();
                         break;
                     }
                 case 3:
@@ -478,8 +478,8 @@ namespace Project_2
                         if (0 < fileBordNr1 && fileBordNr1 <= 20) choise300 = true;
                     }
                     bordsnr = fileBordNr1;
-                    update();
-                    choise();
+                    Update();
+                    Choise();
                     break;
             }
         }

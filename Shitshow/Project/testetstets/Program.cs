@@ -28,16 +28,6 @@ namespace Project_2
             if (inp.Length <= 10) Thread.Sleep(500);
             Console.WriteLine();
         }
-        static void slee1(string inp)
-        {
-            for (int i = 0; i <= inp.Length - 1; i++)
-            {
-                Console.ForegroundColor = ConsoleColor.White;
-                Thread.Sleep(1);
-                Console.Write(inp.Substring(i, 1));
-            }
-            if (inp.Length <= 10) Thread.Sleep(500);
-        }
         static void Main()
         {
             slee("Detta är Centralrestaurangens bordshanterare");
@@ -394,7 +384,7 @@ namespace Project_2
 
         static void update()
         {
-            // files = Directory.GetFiles(path, "*.txt", SearchOption.AllDirectories).Where(filename => !filename.EndsWith("FileListAbsolute.txt")).ToArray();
+            files = Directory.GetFiles(path, "*.txt", SearchOption.AllDirectories).Where(filename => !filename.EndsWith("FileListAbsolute.txt")).ToList();
             if (bordsnr > tempinfo.Count)
             {
                 int runThrough = bordsnr - tempinfo.Count;

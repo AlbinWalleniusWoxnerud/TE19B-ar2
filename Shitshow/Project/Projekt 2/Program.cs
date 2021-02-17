@@ -359,7 +359,7 @@ namespace Project_2
                 if (0 < a && a < bordsnr) choise2 = true;
             }
             a -= 1;
-            tempinfo[a] = ($"{a + 1};0;Inga gäster;0");
+            tempinfo[a] = ($"{a + 1};0;Inga gäster;0;{maxGäster}");
             update();
         }
 

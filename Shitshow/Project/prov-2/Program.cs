@@ -88,7 +88,8 @@ namespace prov_2
                         }
 
                         retard += summaT;
-                        for (int i = 0; i < retard.Length; i++)
+                        int l = retard.Length;
+                        for (int i = l; i >= 0; i--)
                         {
 
                         }
